@@ -10,16 +10,17 @@ export class CtaButton extends LitElement {
       .cta-button {
         background-color: #bf40bf;
         color: #000;
+        font-family: copperplate, fantasy;
       }
       .cta-button:hover {
         background-color: #cf9fff;
       }
       .button {
-        border: none;
-        border-radius: 3em;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        border: dashed;
+        border-radius: 50em;
+        box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
         display: inline block;
-        font-size: 1em;
+        font-size: 2em;
         padding: 1em 2em;
         width: auto;
       }
