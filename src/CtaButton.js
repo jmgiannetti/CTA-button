@@ -14,18 +14,12 @@ export class CtaButton extends LitElement {
   static get properties() {
     return {
       title: { type: String },
-      counter: { type: Number },
     };
   }
 
   constructor() {
     super();
     this.title = 'Hey there';
-    this.counter = 5;
-  }
-
-  __increment() {
-    this.counter += 1;
   }
 
   render() {
