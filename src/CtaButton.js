@@ -8,11 +8,11 @@ export class CtaButton extends LitElement {
         text-align: center;
       }
       .cta-button {
-        background-color: #a3f;
+        background-color: #bf40bf;
         color: #000;
       }
       .cta-button:hover {
-        background-color: #f1b;
+        background-color: #cf9fff;
       }
       .button {
         border: none;
@@ -25,28 +25,17 @@ export class CtaButton extends LitElement {
       }
       :host {
         display: block;
-        padding: 25px;
+        padding: 400px;
         color: var(--cta-button-text-color, #000);
       }
     `;
-  }
-
-  static get properties() {
-    return {
-      title: { type: String },
-    };
-  }
-
-  constructor() {
-    super();
-    this.title = 'Hey there';
   }
 
   render() {
     return html`
       <div class="button-wrapper">
         <a class="button cta-button" href="https://www.twitch.tv/officialtazed"
-          >Click Here</a
+          >Check out my channel!</a
         >
       </div>
     `;
