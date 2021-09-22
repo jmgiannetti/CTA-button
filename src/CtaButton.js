@@ -18,7 +18,7 @@ export class CtaButton extends LitElement {
       .button {
         border: dashed;
         border-radius: 50em;
-        box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 50px 23px 20px rgba(0, 0, 0, 0.2);
         display: inline block;
         font-size: 2em;
         padding: 1em 2em;
