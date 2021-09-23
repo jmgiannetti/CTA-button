@@ -14,7 +14,7 @@ export class CtaButton extends LitElement {
         color: #000;
         font-family: copperplate, fantasy;
       }
-      //adding focus to hover command allows button to change color when tabbed to
+      // adding focus to hover command allows button to change color when tabbed to
       .cta-button:hover,
       :focus {
         background-color: #cf9fff;
