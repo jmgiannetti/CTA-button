@@ -1,4 +1,6 @@
 import { html, css, LitElement } from 'lit';
+import '@lrnwebcomponents/simple-icon/lib/simple-icon-lite.js';
+import '@lrnwebcomponents/simple-icon/lib/simple-icons.js';
 
 export class CtaButton extends LitElement {
   static get styles() {
@@ -12,12 +14,10 @@ export class CtaButton extends LitElement {
         color: #000;
         font-family: copperplate, fantasy;
       }
-      .cta-button:hover {
+      //adding focus to hover command allows button to change color when tabbed to
+      .cta-button:hover,
+      :focus {
         background-color: #cf9fff;
-      }
-      //trying to make webpage keyboard accessible, currently failing.
-      .button:focus {
-        outline: 3px solid red;
       }
 
       .button {
@@ -42,6 +42,7 @@ export class CtaButton extends LitElement {
     return {
       buttonText: { Type: String },
       buttonLink: { Type: String },
+      icon: { Type: String },
     };
   }
 
@@ -50,14 +51,16 @@ export class CtaButton extends LitElement {
     super();
     this.buttonText = 'Check out my channel!';
     this.buttonLink = 'https://www.twitch.tv/officialtazed';
+    this.icon = 'av:videocam';
   }
 
   // called variables into HTML code
   render() {
     return html`
       <div class="button-wrapper">
-        <a class="button cta-button" href=${this.buttonLink}
-          >${this.buttonText}</a
+        <a class="button cta-button" href="${this.buttonLink}">
+          <simple-icon-lite icon="${this.icon}"> </simple-icon-lite>
+          ${this.buttonText}</a
         >
       </div>
     `;
